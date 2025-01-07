@@ -1,6 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 import '../../domain/entities/result.dart';
+import '../../domain/entities/transaction.dart';
 
 abstract interface class TransactionRepository {
   Future<Result<Transaction>> createTransaction(

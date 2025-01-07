@@ -23,6 +23,6 @@ abstract class UserRepository {
   });
   Future uploadProfilePicture({
     required User user,
-    required File imageProfile,
+    required File imageFile,
   });
 }
