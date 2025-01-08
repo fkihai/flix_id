@@ -6,7 +6,7 @@ import 'package:flix_id/domain/entities/movie_detail.dart';
 import 'package:flix_id/domain/entities/result.dart';
 import 'package:flutter/material.dart';
 
-class TmdbMoviRepository implements MovieRepository {
+class TmdbMovieRepository implements MovieRepository {
   final Dio? _dio;
   final String _accessToken =
       "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ODhmZTVjMTVkZTIxMTZjNWJhODcwNTM2ODRhNTA3ZCIsIm5iZiI6MTczNTYxMzc5OC41NjcwMDAyLCJzdWIiOiI2NzczNWQ2NmZiZTM3MjJhOTg2MTc2YzEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.D60Z8jjnu0JwSXnFJzHCYR0hECCLQ58BQCmX8gAKpnE";
@@ -16,7 +16,7 @@ class TmdbMoviRepository implements MovieRepository {
     'accept': 'application/json'
   });
 
-  TmdbMoviRepository(Dio? dio) : _dio = dio ?? Dio();
+  TmdbMovieRepository({Dio? dio}) : _dio = dio ?? Dio();
 
   @override
   Future<Result<List<Actor>>> getActors({required int id}) async {

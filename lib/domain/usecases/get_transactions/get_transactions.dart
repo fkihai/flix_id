@@ -5,11 +5,11 @@ import 'package:flix_id/domain/usecases/usecase.dart';
 
 import '../../entities/transaction.dart';
 
-class GetTransaction
+class GetTransactions
     implements Usecase<Result<List<Transaction>>, GetTransactionsParam> {
   final TransactionRepository _transactionRepository;
 
-  GetTransaction({required TransactionRepository transactionRepository})
+  GetTransactions({required TransactionRepository transactionRepository})
       : _transactionRepository = transactionRepository;
 
   @override
